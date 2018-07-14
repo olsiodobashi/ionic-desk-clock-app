@@ -1,0 +1,8 @@
+{
+  "name": "clock",
+  "app_id": "24408a83",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
