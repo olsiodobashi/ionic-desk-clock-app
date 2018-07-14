@@ -1,0 +1,52 @@
+page-home > .content {
+    background-color: #252830;
+    color: white;
+}
+
+h1 {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    > span {
+        @media (orientation: portrait) {
+            display: none;
+        }
+    }
+}
+
+.settings {
+    bottom: 0;
+    position: fixed;
+    right: 0;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.roboto-mono {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.small {
+    font-size: 6rem;
+}
+
+.medium {
+  font-size: 8rem;
+}
+
+.large {
+    font-size: 10rem;
+}

@@ -1,0 +1,14 @@
+<ion-content padding [ngStyle]="{ 'background-color': settings?.background }">
+    <div class="body">
+        <h1 class="{{ settings.font }} {{ settings.size }}" *ngIf="now && settings"
+        [ngStyle]="{ 'color': settings?.color }">
+            {{ now.hrs }}:{{ now.mins }}<span>:{{ now.secs }}</span>
+        </h1>
+        <div class="settings">
+            <button ion-button color="light" clear icon-only (click)="openSettingsPage()"
+                [ngStyle]="{ 'color': settings?.color }">
+                <ion-icon name='settings' is-active="false"></ion-icon>
+            </button>
+        </div>
+    </div>
+</ion-content>

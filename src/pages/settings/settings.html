@@ -1,0 +1,92 @@
+<ion-content padding>
+    <h3>
+        DeskClock Settings
+    </h3>
+
+    <ion-list>
+        <ion-item no-padding>
+            <ion-label>
+                Font
+            </ion-label>
+            <ion-select [(ngModel)]="settings.font" *ngIf="settings">
+                <ion-option value="montserrat">
+                    Montserrat
+                </ion-option>
+                <ion-option value="lato">
+                    Lato
+                </ion-option>
+                <ion-option value="roboto">
+                    Roboto
+                </ion-option>
+                <ion-option value="roboto-mono">
+                    Roboto Mono
+                </ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item no-padding>
+            <ion-label>
+                Size
+            </ion-label>
+            <ion-select [(ngModel)]="settings.size" *ngIf="settings">
+                <ion-option value="small">
+                    Small
+                </ion-option>
+                <ion-option value="medium">
+                    Medium
+                </ion-option>
+                <ion-option value="large">
+                    Large
+                </ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item no-padding>
+            <ion-grid no-padding>
+                <ion-row align-items-center justify-content-between>
+                    <ion-col col-5>
+                        Background
+                    </ion-col>
+
+                    <ion-col col-5 *ngIf="settings">
+                        <ion-item no-lines>
+                            <ion-input type="text" [(ngModel)]="settings.background"></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col col-2 text-right>
+                        <button ion-button clear icon-only (click)="openBackgroundColorModal('background')">
+                            <ion-icon name="color-palette"></ion-icon>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+        <ion-item no-padding>
+            <ion-grid no-padding>
+                <ion-row align-items-center justify-content-between>
+                    <ion-col col-5>
+                        Color
+                    </ion-col>
+
+                    <ion-col col-5 *ngIf="settings">
+                        <ion-item no-lines>
+                            <ion-input type="text" [(ngModel)]="settings.color"></ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col col-2 text-right>
+                        <button ion-button clear icon-only (click)="openBackgroundColorModal('color')">
+                            <ion-icon name="color-palette"></ion-icon>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+    </ion-list>
+
+    <footer class="btn-fixed-bottom" text-center>
+        <small>
+            Pro tip: any valid CSS color will work
+        </small>
+        <button ion-button full (click)="saveOptions()">Save</button>
+    </footer>
+</ion-content>
